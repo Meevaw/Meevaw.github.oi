@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft 皮肤替换器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Minecraft 皮肤替换器</h1>
+
+  <section class="panel">
+    <h2>1. 上传你的皮肤</h2>
+    <input type="file" id="userSkinInput" accept="image/png">
+    <p class="hint">必须是 64x64 或 64x32 的 PNG</p>
+  </section>
+
+  <section class="panel">
+    <h2>2. 选择样本</h2>
+    <div id="sampleList" class="sample-list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>3. 选择要替换的部位</h2>
+    <div id="partList" class="part-list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>4. 预览与下载</h2>
+    <div class="preview-row">
+      <div>
+        <p>你的皮肤</p>
+        <canvas id="userCanvas" width="64" height="64"></canvas>
+      </div>
+      <div>
+        <p>样本</p>
+        <canvas id="sampleCanvas" width="64" height="64"></canvas>
+      </div>
+      <div>
+        <p>合并结果</p>
+        <canvas id="resultCanvas" width="64" height="64"></canvas>
+      </div>
+    </div>
+    <button id="downloadBtn" disabled>下载合并后的皮肤</button>
+    <canvas id="skin3d" width="300" height="400"></canvas>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/skinview3d/bundles/skinview3d.bundle.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
